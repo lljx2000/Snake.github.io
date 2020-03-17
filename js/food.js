@@ -1,5 +1,5 @@
 //食物
-//自调用函数，开启一个新的作用域
+//自调用函数，开启一个新的作用域，避免命名冲突
 (function() {
     var position = 'absolute';
     //记录上一次创建的食物，为删除做准备
@@ -43,7 +43,8 @@
     }
     window.Food = Food;
 })()
+
 //测试
-var map = document.getElementById('map');
-var food = new Food();
-food.render(map);
+// var map = document.getElementById('map');
+// var food = new Food();
+// food.render(map);
