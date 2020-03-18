@@ -1,4 +1,4 @@
-(function() {
+(function () {
     var that; // 记录游戏对象
     function Game(map) {
         this.food = new Food();
@@ -7,7 +7,7 @@
         that = this;
     }
 
-    Game.prototype.start = function() {
+    Game.prototype.start = function () {
         //把蛇和食物对象，渲染到地图上
         this.food.render(this.map);
         this.snake.render(this.map);
@@ -22,7 +22,7 @@
 
     //通过键盘控制蛇移动的方向(addEventListener第一个参数是键盘按键形式，第二个参数是函数方法，第三个参数是指定事件是否在捕获或冒泡阶段执行)
     function bindkey() {
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             //输出键盘按键的代码
             // console.log(e.keyCode);
             switch (e.keyCode) {
@@ -43,7 +43,7 @@
     }
     //让蛇移动(setInterval第一个参数是函数方法，第二个参数是时间间隔)
     function runSnake() {
-        var timerID = setInterval(function() {
+        var timerID = setInterval(function () {
             //让蛇走一格
             that.snake.move(that.food, that.map);
             that.snake.render(that.map);

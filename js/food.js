@@ -1,6 +1,6 @@
 //食物
 //自调用函数，开启一个新的作用域，避免命名冲突
-(function() {
+(function () {
     var position = 'absolute';
     //记录上一次创建的食物，为删除做准备
     var elements = [];
@@ -14,7 +14,7 @@
         this.color = options.color || 'yellow';
     }
     //渲染
-    Food.prototype.render = function(map) {
+    Food.prototype.render = function (map) {
         //删除之前的创建对象
         remove();
         //随机设置x和y的值
@@ -27,7 +27,7 @@
         //设置div的样式
         div.style.position = position;
         div.style.left = this.x + 'px';
-        div.style.top = this.x + 'px';
+        div.style.top = this.y + 'px';
         div.style.width = this.width + 'px';
         div.style.height = this.height + 'px';
         div.style.backgroundColor = this.color;
