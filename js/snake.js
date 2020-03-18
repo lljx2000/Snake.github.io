@@ -24,17 +24,17 @@
             //蛇节
             var obj = this.body[i];
             var div = document.createElement('div');
-            map.appendChild(div);
-            elements.push[div];
             div.style.left = obj.x * this.width + 'px';
             div.style.top = obj.y * this.height + 'px';
             div.style.position = position;
             div.style.backgroundColor = obj.color;
             div.style.width = this.width + 'px';
             div.style.height = this.height + 'px';
+            div.style.borderRadius = '50%';
+            map.appendChild(div);
+            elements.push[div];
         }
     }
-
 
     //控制蛇移动的方法
     Snake.prototype.move = function(food, map) {
@@ -75,7 +75,8 @@
     }
 
     function remove() {
-        for (var i = elements.length - 1; i >= 0; i--) {
+        var i = elements.length - 1;
+        for (; i >= 0; i--) {
             elements[i].parentNode.removeChild(elements[i]);
             elements.splice(i, 1);
         }

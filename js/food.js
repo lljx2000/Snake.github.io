@@ -31,6 +31,7 @@
         div.style.width = this.width + 'px';
         div.style.height = this.height + 'px';
         div.style.backgroundColor = this.color;
+        div.style.borderRadius = '50%';
     }
 
     function remove() {
